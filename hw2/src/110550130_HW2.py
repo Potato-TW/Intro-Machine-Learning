@@ -118,8 +118,8 @@ class FLD:
 # You can only modify the value of the arguments of your Logistic Regression class.
 if __name__ == "__main__":
 # Data Loading
-    train_df = DataFrame(read_csv("train.csv"))
-    test_df = DataFrame(read_csv("test.csv"))
+    train_df = DataFrame(read_csv("/mnt/c/Users/bhg08/Desktop/github_repo/Intro-Machine-Learning/hw2/data/train.csv"))
+    test_df = DataFrame(read_csv("/mnt/c/Users/bhg08/Desktop/github_repo/Intro-Machine-Learning/hw2/data/test.csv"))
 
 # Part 1: Logistic Regression
     # Data Preparation

@@ -62,7 +62,7 @@ class LinearRegression:
 # You can only modify the arguments of your gradient descent fitting function.
 if __name__ == "__main__":
     # Data Preparation
-    train_df = DataFrame(read_csv("train.csv"))
+    train_df = DataFrame(read_csv("/mnt/c/Users/bhg08/Desktop/github_repo/Intro-Machine-Learning/hw1/data/train.csv"))
     train_x = train_df.drop(["Performance Index"], axis=1)
     train_y = train_df["Performance Index"]
     train_x = train_x.to_numpy()
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     print("Gradient Descent Solution")
     print(f"Weights: {LR.gradient_descent_weights}, Intercept: {LR.gradient_descent_intercept}")
 
-    test_df = DataFrame(read_csv("test.csv"))
+    test_df = DataFrame(read_csv("/mnt/c/Users/bhg08/Desktop/github_repo/Intro-Machine-Learning/hw1/data/test.csv"))
     test_x = test_df.drop(["Performance Index"], axis=1)
     test_y = test_df["Performance Index"]
     test_x = test_x.to_numpy()
@@ -88,5 +88,3 @@ if __name__ == "__main__":
     closed_form_loss = LR.closed_form_evaluate(test_x, test_y)
     gradient_descent_loss = LR.gradient_descent_evaluate(test_x, test_y)
     print(f"Error Rate: {((gradient_descent_loss - closed_form_loss) / closed_form_loss * 100):.1f}%")
-
-    # LR.plot_learning_curve()
